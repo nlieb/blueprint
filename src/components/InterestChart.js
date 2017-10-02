@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import * as d3 from 'd3';
+import './InterestChart.css';
 
 export default class InterestChart extends Component {
     constructor(props) {
@@ -31,10 +32,6 @@ export default class InterestChart extends Component {
 
         // A = A (1 + i/(12n)) + M/n
 
-        const firms = {
-
-        }
-
         const interests = [0.01, 0.03, 0.04];
         const predictions = [[this.state.startAmount], [this.state.startAmount], [this.state.startAmount]];
 
@@ -45,9 +42,9 @@ export default class InterestChart extends Component {
         }
 
         let data = [
-            d3.range(0, months, 1).map(t => ({date: t, close: predictions[0][t] })),
-            d3.range(0, months, 1).map(t => ({date: t, close: predictions[1][t] })),
-            d3.range(0, months, 1).map(t => ({date: t, close: predictions[2][t] })),
+            d3.range(0, months, 1).map(t => ({date: t/12, close: predictions[0][t] })),
+            d3.range(0, months, 1).map(t => ({date: t/12, close: predictions[1][t] })),
+            d3.range(0, months, 1).map(t => ({date: t/12, close: predictions[2][t] })),
         ];
 
         x.domain(d3.extent([].concat(...data), function(d) { return d.date; }));
@@ -65,7 +62,8 @@ export default class InterestChart extends Component {
 
         g.select(".axis-bottom")
             .attr("transform", "translate(0," + height + ")")
-            .call(d3.axisBottom(x));
+            .call(d3.axisBottom(x)
+                .tickValues([5, 10, 15, 20, 25, 30]));
     }
 
     componentDidMount() {
@@ -77,13 +75,23 @@ export default class InterestChart extends Component {
     }
 
     render() {
-        console.log('test');
         return (
             <div className="container" style={{width: this.props.width + "px"}}>
-                <input type="range" min="5000" max="100000"
+                <div className="sliders" style={{position:'absolute', left: 100+'px', top: 200+'px'}}>
+                    Starting investment ${this.state.startAmount}<br />
+                <input type="range" min="1000" max="100000"
                        value={this.state.startAmount}
                        onChange={event => this.setState({startAmount: +event.target.value})}
+                       style={{width: 300+'px'}}
                     />
+                    <br />
+                    Monthly deposit ${this.state.monthlyAmount}<br />
+                <input type="range" min="0" max="2000"
+                       value={this.state.monthlyAmount}
+                       onChange={event => this.setState({monthlyAmount: +event.target.value})}
+                       style={{width: 300+'px'}}
+                    />
+                </div>
                 <svg
                     ref={svg => (this.svg = svg)}
                     width={this.props.width + 'px'}

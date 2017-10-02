@@ -1,0 +1,11 @@
+path.domain {
+    display:none;
+}
+
+g.tick line {
+    display: none;
+}
+
+g.tick text {
+    font-size: 16px;
+}
