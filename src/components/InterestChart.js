@@ -103,7 +103,14 @@ export default class InterestChart extends Component {
 
     render() {
         return (
-            <div className="interest-container" style={{width: this.props.width + "px", marginTop: 150+'px', position: 'relative'}}>
+            <div className="interest-container"
+                 style={{
+                     width: this.props.width + "px",
+                     marginTop: 150+'px',
+                     marginBottom: 100,
+                     marginLeft: "auto",
+                     marginRight: "auto",
+                     position: 'relative'}}>
                 <div className="sliders" style={{position:'absolute', left: 100+'px', top: 20+'px'}}>
                 <h2>Invest in your future</h2>
                     Use the sliders to see how much you<br /> can earn on your investment<br /><br />

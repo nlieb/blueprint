@@ -3,7 +3,7 @@ import { Row, Col } from 'react-bootstrap';
 
 const BlueprintInfoTextbox = (props) => {
     return (
-        <Row className="info-row">
+        <Row className="info-row" style={{ marginTop: "2em", marginBottom: "2em" }}>
             <Col md={8} mdOffset={2}>
                 <h2>See How Much You Can Save...</h2>
                 <br/>
@@ -22,8 +22,8 @@ const BlueprintInfoTextbox = (props) => {
                 <br/>
                 <ul style={{ listStyleType: 'none' }}>
                     <li>Step 1: Help us get to know you by telling us about your goals</li>
-                    <li>Step 2: We recommend you an investment portfolio based on your goals and help yopu open your accounts</li>
-                    <li>Step 3: We take care of the rest! You can track your progress online via th eweb or mobile app anytime, anywhere</li>
+                    <li>Step 2: We recommend you an investment portfolio based on your goals and help you open your accounts</li>
+                    <li>Step 3: We take care of the rest! You can track your progress online via the web or mobile app anytime, anywhere</li>
                 </ul>
             </Col>
         </Row>

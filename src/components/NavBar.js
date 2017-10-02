@@ -15,7 +15,7 @@ const BlueprintNavBar = (props) => {
                 <Navbar.Toggle />
             </Navbar.Header>
             <Navbar.Collapse>
-                <Nav pullRight style={{ paddingRight: 20 }}>
+                <Nav pullRight>
                     <NavDropdown eventKey={1} title="Why Blueprint?" id="basic-nav-dropdown">
                         <MenuItem eventKey={1.1}>Overview</MenuItem>
                         <MenuItem eventKey={1.2}>Smart Investing</MenuItem>

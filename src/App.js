@@ -15,13 +15,11 @@ class App extends Component {
                 </head>
                 <BlueprintNavBar/>
                 <div>
-                    <div style={{ width: "90%" , marginLeft: "auto", marginRight: "auto" }}>
-                        <InterestChart
-                            width={960}
-                            height={500}
-                        />
-                        <BlueprintInfoTextbox/>
-                    </div>
+                    <InterestChart
+                        width={960}
+                        height={500}
+                    />
+                    <BlueprintInfoTextbox/>
                 </div>
             </div>
         );
