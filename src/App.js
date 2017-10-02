@@ -14,13 +14,15 @@ class App extends Component {
                     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css"/>
                 </head>
                 <BlueprintNavBar/>
-                <div className="content">
-                    <InterestChart
-                        width={960}
-                        height={500}
-                    />
+                <div>
+                    <div style={{ width: "90%" , marginLeft: "auto", marginRight: "auto" }}>
+                        <InterestChart
+                            width={960}
+                            height={500}
+                        />
+                        <BlueprintInfoTextbox/>
+                    </div>
                 </div>
-                <BlueprintInfoTextbox/>
             </div>
         );
     }
