@@ -12,5 +12,9 @@ html {
 }
 
 .content {
-  margin-top: 80px;
+    margin-top: 80px;
+}
+
+nav {
+    border-radius: 0 !important;
 }
