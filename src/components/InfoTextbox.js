@@ -17,7 +17,10 @@ const BlueprintInfoTextbox = (props) => {
                 <br/>
                 Open an Account today! It takes under 10 minutes!  Have Questions? Chat with a Financial Advisor
                 </p>
-                <ul>
+                <a>Have Questions? Chat with a Financial Advisor</a>
+                <br/>
+                <br/>
+                <ul style={{ listStyleType: 'none' }}>
                     <li>Step 1: Help us get to know you by telling us about your goals</li>
                     <li>Step 2: We recommend you an investment portfolio based on your goals and help yopu open your accounts</li>
                     <li>Step 3: We take care of the rest! You can track your progress online via th eweb or mobile app anytime, anywhere</li>
