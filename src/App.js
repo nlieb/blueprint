@@ -3,6 +3,7 @@ import './App.css';
 
 import BlueprintNavBar from './components/NavBar';
 import InterestChart from './components/InterestChart';
+import BlueprintInfoTextbox from './components/InfoTextbox';
 
 class App extends Component {
     render() {
@@ -18,6 +19,7 @@ class App extends Component {
                     height={500}
 
                 />
+                <BlueprintInfoTextbox/>
             </div>
         );
     }
