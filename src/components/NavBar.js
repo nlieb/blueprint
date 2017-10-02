@@ -19,16 +19,17 @@ const BlueprintNavBar = (props) => {
                     <NavDropdown eventKey={1} title="Why Blueprint?" id="basic-nav-dropdown">
                         <MenuItem eventKey={1.1}>Overview</MenuItem>
                         <MenuItem eventKey={1.2}>Smart Investing</MenuItem>
-                        <MenuItem eventKey={1.3}>Something else here</MenuItem>
+                        <MenuItem eventKey={1.3}>Account Security</MenuItem>
+                        <MenuItem eventKey={1.3}>Our Team</MenuItem>
+                        <MenuItem eventKey={1.3}>Our Mission</MenuItem>
                         <MenuItem divider />
-                        <MenuItem eventKey={1.3}>Separated link</MenuItem>
+                        <MenuItem eventKey={1.3}>Fee Calculator</MenuItem>
+                        <MenuItem eventKey={1.3}>Compounding Calculator</MenuItem>
                     </NavDropdown>
                     <NavDropdown eventKey={2} title="Portfolio" id="basic-nav-dropdown">
-                        <MenuItem eventKey={2.1}>Action</MenuItem>
-                        <MenuItem eventKey={2.2}>Another action</MenuItem>
-                        <MenuItem eventKey={2.3}>Something else here</MenuItem>
-                        <MenuItem divider />
-                        <MenuItem eventKey={2.3}>Separated link</MenuItem>
+                        <MenuItem eventKey={2.1}>Our Portfolios</MenuItem>
+                        <MenuItem eventKey={2.2}>Pricing</MenuItem>
+                        <MenuItem eventKey={2.3}>Our Investment Approach</MenuItem>
                     </NavDropdown>
                     <NavItem eventKey={3} href="#">FAQ's</NavItem>
                     <NavItem eventKey={4} href="#">Login</NavItem>

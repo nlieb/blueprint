@@ -13,11 +13,12 @@ class App extends Component {
                     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css"/>
                 </head>
                 <BlueprintNavBar/>
-                <InterestChart
-                    width={960}
-                    height={500}
-
-                />
+                <div className="content">
+                    <InterestChart
+                        width={960}
+                        height={500}
+                    />
+                </div>
             </div>
         );
     }
