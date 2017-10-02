@@ -55,15 +55,42 @@ export default class InterestChart extends Component {
         pathsel.enter()
             .append("path")
             .classed("line", true)
-            .attr("fill", "steelblue")
-            .attr("opacity", "0.1")
+            .attr("fill", "#f27d59")
+            .attr("opacity", "0.3")
             .merge(pathsel)
             .attr("d", area);
+
+        const textsel = g.selectAll("text.firm").data(data);
+        textsel.enter()
+            .append("text")
+            .classed("firm", true)
+            .merge(textsel)
+            .text((d, i) => {
+                const val = Math.floor(d[d.length-1].close).toLocaleString();
+                switch(i) {
+                    case 0:
+                        return 'Savings account $'+val;
+                    case 1:
+                        return 'Traditional investor $'+val;
+                    case 2:
+                        return 'Blueprint investing $'+val;
+                }
+            })
+            .attr('font-weight', (d, i) => i === 2 ? '700' : '400')
+            .attr('text-anchor', 'end')
+
+            .attr('y', d => y(d[d.length-1].close) + 30)
+            .attr('x', d => x.range()[1] - 30);
 
         g.select(".axis-bottom")
             .attr("transform", "translate(0," + height + ")")
             .call(d3.axisBottom(x)
                 .tickValues([5, 10, 15, 20, 25, 30]));
+
+        g.select("#label-year")
+            .attr('y', y(0)+20)
+            .attr('font-size', 16+'px')
+            .attr('font-weight', '700')
     }
 
     componentDidMount() {
@@ -77,19 +104,21 @@ export default class InterestChart extends Component {
     render() {
         return (
             <div className="container" style={{width: this.props.width + "px"}}>
-                <div className="sliders" style={{position:'absolute', left: 100+'px', top: 200+'px'}}>
-                    Starting investment ${this.state.startAmount}<br />
+                <div className="sliders" style={{position:'absolute', left: 100+'px', top: 80+'px'}}>
+                <h2>Invest in your future</h2>
+                    Use the sliders to see how much you<br /> can earn on your investment<br /><br />
+                <b>Starting investment ${this.state.startAmount}</b><br />
                 <input type="range" min="1000" max="100000"
                        value={this.state.startAmount}
                        onChange={event => this.setState({startAmount: +event.target.value})}
-                       style={{width: 300+'px'}}
+                       style={{width: 260+'px'}}
                     />
                     <br />
-                    Monthly deposit ${this.state.monthlyAmount}<br />
+                    <b>Monthly deposit ${this.state.monthlyAmount}</b><br />
                 <input type="range" min="0" max="2000"
                        value={this.state.monthlyAmount}
                        onChange={event => this.setState({monthlyAmount: +event.target.value})}
-                       style={{width: 300+'px'}}
+                       style={{width: 260+'px'}}
                     />
                 </div>
                 <svg
@@ -103,7 +132,9 @@ export default class InterestChart extends Component {
 
                     <g className="container">
                         <g className="axis-bottom" />
+                        <text id="label-year">Year</text>
                     </g>
+
 
                 </svg>
             </div>
