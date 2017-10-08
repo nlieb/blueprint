@@ -4,6 +4,7 @@ import './App.css';
 import BlueprintNavBar from './components/NavBar';
 import InterestChart from './components/InterestChart';
 import BlueprintInfoTextbox from './components/InfoTextbox';
+import EasyProcessBox from './components/EasyProcessBox';
 
 class App extends Component {
     render() {
@@ -19,7 +20,7 @@ class App extends Component {
                         width={960}
                         height={500}
                     />
-                    <BlueprintInfoTextbox/>
+                    <EasyProcessBox/>
                 </div>
             </div>
         );
