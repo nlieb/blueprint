@@ -4,13 +4,25 @@
 import React from "react";
 import { Nav, Navbar, NavItem, NavDropdown, MenuItem } from 'react-bootstrap';
 
+const titleStyle = {
+    fontSize: 28,
+    color: '#2B84EA',
+    fontWeight: 'bold',
+};
+
+const startInvestingStyle = {
+    color: '#2B84EA',
+};
+
 const BlueprintNavBar = (props) => {
     return (
-        <Navbar inverse collapseOnSelect
-            style={{ position: "absolute", top: 0, left: 0, width: "100%" }}>
+        <Navbar collapseOnSelect fixedTop
+            style={{ position: "absolute", top: 0, left: 0, width: "100%", fontFamily: 'Open Sans, sans-serif', backgroundColor: 'white', paddingTop: 10, paddingBottom: 10 }}>
             <Navbar.Header>
                 <Navbar.Brand>
-                    <a href="#">Blueprint</a>
+                    <a href="/" style={titleStyle}>
+                        blueprint
+                    </a>
                 </Navbar.Brand>
                 <Navbar.Toggle />
             </Navbar.Header>
@@ -33,7 +45,7 @@ const BlueprintNavBar = (props) => {
                     </NavDropdown>
                     <NavItem eventKey={3} href="#">FAQ's</NavItem>
                     <NavItem eventKey={4} href="#">Login</NavItem>
-                    <NavItem eventKey={5} href="#">Start Investing</NavItem>
+                    <NavItem eventKey={5} href="#" style={startInvestingStyle}>Start Investing</NavItem>
                 </Nav>
             </Navbar.Collapse>
         </Navbar>

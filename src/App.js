@@ -12,6 +12,7 @@ class App extends Component {
             <div className="container">
                 <head>
                     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css"/>
+                    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"/>
                 </head>
                 <BlueprintNavBar/>
                 <div>
