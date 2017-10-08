@@ -55,7 +55,7 @@ export default class InterestChart extends Component {
         pathsel.enter()
             .append("path")
             .classed("line", true)
-            .attr("fill", "#f27d59")
+            .attr("fill", "#2B84EA")
             .attr("opacity", "0.3")
             .merge(pathsel)
             .attr("d", area);
@@ -112,8 +112,7 @@ export default class InterestChart extends Component {
                      marginRight: "auto",
                      position: 'relative'}}>
                 <div className="sliders" style={{position:'absolute', left: 100+'px', top: 20+'px'}}>
-                <h2>Invest in your future</h2>
-                    Invest in your future to build your wealth<br />
+                <h2>Build your wealth</h2>
                     We’ll help you build wealth while saving a fortune on taxes and fees <br />
                     Use the sliders to find out how much you could earn on your investments<br /><br />
                 <b>Starting investment ${(Math.floor(this.state.startAmount/1000)*1000).toLocaleString()}</b><br />
