@@ -55,7 +55,7 @@ export default class InterestChart extends Component {
         pathsel.enter()
             .append("path")
             .classed("line", true)
-            .attr("fill", "#f27d59")
+            .attr("fill", "#2B84EA")
             .attr("opacity", "0.3")
             .merge(pathsel)
             .attr("d", area);
@@ -112,16 +112,17 @@ export default class InterestChart extends Component {
                      marginRight: "auto",
                      position: 'relative'}}>
                 <div className="sliders" style={{position:'absolute', left: 100+'px', top: 20+'px'}}>
-                <h2>Invest in your future</h2>
-                    Use the sliders to see how much you<br /> can earn on your investment<br /><br />
-                <b>Starting investment ${this.state.startAmount}</b><br />
+                <h2>Build your wealth</h2>
+                    We’ll help you build wealth while saving a fortune on taxes and fees <br />
+                    Use the sliders to find out how much you could earn on your investments<br /><br />
+                <b>Starting investment ${(Math.floor(this.state.startAmount/1000)*1000).toLocaleString()}</b><br />
                 <input type="range" min="1000" max="100000"
                        value={this.state.startAmount}
                        onChange={event => this.setState({startAmount: +event.target.value})}
                        style={{width: 260+'px'}}
                     />
                     <br />
-                    <b>Monthly deposit ${this.state.monthlyAmount}</b><br />
+                    <b>Monthly deposit ${(Math.floor(this.state.monthlyAmount/5)*5).toLocaleString()}</b><br />
                 <input type="range" min="0" max="2000"
                        value={this.state.monthlyAmount}
                        onChange={event => this.setState({monthlyAmount: +event.target.value})}
