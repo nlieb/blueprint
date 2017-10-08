@@ -106,8 +106,8 @@ export default class InterestChart extends Component {
             <div className="interest-container"
                  style={{
                      width: this.props.width + "px",
-                     marginTop: 150+'px',
-                     marginBottom: 100,
+                     marginTop: 80+'px',
+                     marginBottom: 80,
                      marginLeft: "auto",
                      marginRight: "auto",
                      position: 'relative'}}>

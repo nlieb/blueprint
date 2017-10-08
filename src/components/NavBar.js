@@ -17,7 +17,7 @@ const startInvestingStyle = {
 const BlueprintNavBar = (props) => {
     return (
         <Navbar collapseOnSelect fixedTop
-            style={{ position: "absolute", top: 0, left: 0, width: "100%", fontFamily: 'Open Sans, sans-serif', backgroundColor: 'white', paddingTop: 10, paddingBottom: 10 }}>
+            style={{ position: "absolute", top: 0, left: 0, width: "100%", backgroundColor: 'white', paddingTop: 10, paddingBottom: 10 }}>
             <Navbar.Header>
                 <Navbar.Brand>
                     <a href="/" style={titleStyle}>

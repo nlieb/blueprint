@@ -3,7 +3,7 @@ import './App.css';
 
 import BlueprintNavBar from './components/NavBar';
 import InterestChart from './components/InterestChart';
-import BlueprintInfoTextbox from './components/InfoTextbox';
+import AchieveGoalsBox from './components/AchieveGoalsBox';
 import EasyProcessBox from './components/EasyProcessBox';
 import BuildWealthBox from './components/BuildWealthBox';
 
@@ -18,16 +18,21 @@ class App extends Component {
                         <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"/>
                     </head>
                     <BlueprintNavBar/>
-                    <InterestChart
-                        width={960}
-                        height={500}
-                    />
-                </div>
-                <div className="container-fluid">
-                    <BuildWealthBox/>
-                </div>
-                <div className="container">
-                    <EasyProcessBox/>
+                    <div className="container-fluid">
+                        <AchieveGoalsBox/>
+                    </div>
+                    <div>
+                        <InterestChart
+                            width={960}
+                            height={500}
+                        />
+                    </div>
+                    <div className="container-fluid">
+                        <BuildWealthBox/>
+                    </div>
+                    <div className="container">
+                        <EasyProcessBox/>
+                    </div>
                 </div>
             </div>
         );
