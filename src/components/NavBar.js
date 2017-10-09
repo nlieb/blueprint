@@ -20,7 +20,7 @@ const BlueprintNavBar = (props) => {
             style={{ position: "absolute", top: 0, left: 0, width: "100%", backgroundColor: 'white', paddingTop: 10, paddingBottom: 10 }}>
             <Navbar.Header>
                 <Navbar.Brand>
-                    <a href="/" style={titleStyle}>
+                    <a href="/blueprint" style={titleStyle}>
                         blueprint
                     </a>
                 </Navbar.Brand>
