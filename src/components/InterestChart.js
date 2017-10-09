@@ -73,7 +73,7 @@ export default class InterestChart extends Component {
                     case 1:
                         return 'Traditional investor $'+val;
                     case 2:
-                        return 'Blueprint investing $'+val;
+                        return 'Blueprint $'+val;
                 }
             })
             .attr('font-weight', (d, i) => i === 2 ? '700' : '400')
@@ -106,8 +106,8 @@ export default class InterestChart extends Component {
             <div className="interest-container"
                  style={{
                      width: this.props.width + "px",
-                     marginTop: 80+'px',
-                     marginBottom: 80,
+                     marginTop: 40+'px',
+                     marginBottom: 40,
                      marginLeft: "auto",
                      marginRight: "auto",
                      position: 'relative'}}>

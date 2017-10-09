@@ -5,7 +5,7 @@ import React from "react";
 import { Nav, Navbar, NavItem, NavDropdown, MenuItem } from 'react-bootstrap';
 
 const titleStyle = {
-    fontSize: 28,
+    fontSize: 36,
     color: '#2B84EA',
     fontWeight: 'bold',
 };
@@ -17,7 +17,7 @@ const startInvestingStyle = {
 const BlueprintNavBar = (props) => {
     return (
         <Navbar collapseOnSelect fixedTop
-            style={{ position: "absolute", top: 0, left: 0, width: "100%", backgroundColor: 'white', paddingTop: 10, paddingBottom: 10 }}>
+            style={{ backgroundColor: 'white', paddingTop: 10, paddingBottom: 10 }}>
             <Navbar.Header>
                 <Navbar.Brand>
                     <a href="/blueprint" style={titleStyle}>
@@ -45,7 +45,7 @@ const BlueprintNavBar = (props) => {
                     </NavDropdown>
                     <NavItem eventKey={3} href="#">FAQ's</NavItem>
                     <NavItem eventKey={4} href="#">Login</NavItem>
-                    <NavItem eventKey={5} href="#" style={startInvestingStyle}>Start Investing</NavItem>
+                    <NavItem eventKey={5} href="#" style={startInvestingStyle}>Get Started</NavItem>
                 </Nav>
             </Navbar.Collapse>
         </Navbar>
